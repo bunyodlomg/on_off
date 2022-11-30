@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./animate.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="myAudio" onclick="playAudio()">
+        <source src="./light-switch-81967.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="tun_kun wow bounce">
+            <div class="circle">
+                <img class="img wow bounce" src="./img/off.png" width="160" alt="">
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        
+        document.onreadystatechange = () => {
+            new WOW().init();
+        }
+        var circle = document.querySelector('.circle');
+        var on$off = document.querySelector('.tun_kun');
+        var img = document.querySelector('.img');
+        var x = document.getElementById("myAudio");
+        const d = new Date();
+        document.body.style.backgroundImage = "url('./img/bg_sun.jpg')";
+        circle.addEventListener('click', function on_off(event) {
+            var a = circle.style.transform;
+            x.play();
+            if (a === 'translate(0px)') {
+                circle.style.transform = 'translate(200px)';
+                circle.style.transition = '1s';
+                img.src = "./img/on.png";
+                document.body.style.backgroundImage = "url('./img/bg_sun.jpg')";
+                document.body.style.transition = '.5s';
+                on$off.style.backgroundColor = 'white';
+            } else {
+                circle.style.transform = 'translate(0px)'
+                circle.style.transition = '1s';
+                img.src = "./img/off.png";
+                document.body.style.backgroundImage = "url('./img/bg_moon.jpg')";
+                document.body.style.transition = '.5s';
+                on$off.style.backgroundColor = 'black';
+            }
+        });
+    </script>
+    <script src="./wow.js"></script>
+</body>
+
+</html>

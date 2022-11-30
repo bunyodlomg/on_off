@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html, body{
+    height: 100%;
+}
+body {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.tun_kun {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #000;
+    width: 400px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+}
+.circle:hover{
+    cursor: pointer;
+}
